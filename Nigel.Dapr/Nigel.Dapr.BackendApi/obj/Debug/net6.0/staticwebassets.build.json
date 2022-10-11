@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "2kPOmHW9kBWL+44mKPUJ5FSy3hUdvWZmgrlrssEoBko=",
+  "Source": "Nigel.Dapr.BackendApi",
+  "BasePath": "_content/Nigel.Dapr.BackendApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

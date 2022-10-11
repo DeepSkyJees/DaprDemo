@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "RTXIr6IySSdGwcidcvUYoF6iPolMoOOHZtIj3Wfr2HI=",
+  "Source": "daprservice",
+  "BasePath": "_content/daprservice",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
