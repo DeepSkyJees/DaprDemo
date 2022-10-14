@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Labs\\Code\\Dapr\\Nigel.Dapr\\Nigel.Dapr.FrontApi\\Nigel.Dapr.FrontApi.csproj": {}
+    "D:\\Labs\\Code\\Dapr\\DaprDemo\\Nigel.Dapr\\Nigel.Dapr.FrontApi\\Nigel.Dapr.FrontApi.csproj": {}
   },
   "projects": {
-    "D:\\Labs\\Code\\Dapr\\Nigel.Dapr\\Nigel.Dapr.FrontApi\\Nigel.Dapr.FrontApi.csproj": {
+    "D:\\Labs\\Code\\Dapr\\DaprDemo\\Nigel.Dapr\\Nigel.Dapr.FrontApi\\Nigel.Dapr.FrontApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Labs\\Code\\Dapr\\Nigel.Dapr\\Nigel.Dapr.FrontApi\\Nigel.Dapr.FrontApi.csproj",
+        "projectUniqueName": "D:\\Labs\\Code\\Dapr\\DaprDemo\\Nigel.Dapr\\Nigel.Dapr.FrontApi\\Nigel.Dapr.FrontApi.csproj",
         "projectName": "Nigel.Dapr.FrontApi",
-        "projectPath": "D:\\Labs\\Code\\Dapr\\Nigel.Dapr\\Nigel.Dapr.FrontApi\\Nigel.Dapr.FrontApi.csproj",
+        "projectPath": "D:\\Labs\\Code\\Dapr\\DaprDemo\\Nigel.Dapr\\Nigel.Dapr.FrontApi\\Nigel.Dapr.FrontApi.csproj",
         "packagesPath": "C:\\Users\\yuliang\\.nuget\\packages\\",
-        "outputPath": "D:\\Labs\\Code\\Dapr\\Nigel.Dapr\\Nigel.Dapr.FrontApi\\obj\\",
+        "outputPath": "D:\\Labs\\Code\\Dapr\\DaprDemo\\Nigel.Dapr\\Nigel.Dapr.FrontApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

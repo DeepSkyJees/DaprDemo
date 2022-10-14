@@ -1,0 +1,12 @@
+D:\Labs\Code\Dapr\DaprDemo\Nigel.Dapr\Nigel.Dapr.DomainActors\bin\Debug\net6.0\Nigel.Dapr.DomainActors.deps.json
+D:\Labs\Code\Dapr\DaprDemo\Nigel.Dapr\Nigel.Dapr.DomainActors\bin\Debug\net6.0\Nigel.Dapr.DomainActors.dll
+D:\Labs\Code\Dapr\DaprDemo\Nigel.Dapr\Nigel.Dapr.DomainActors\bin\Debug\net6.0\Nigel.Dapr.DomainActors.pdb
+D:\Labs\Code\Dapr\DaprDemo\Nigel.Dapr\Nigel.Dapr.DomainActors\obj\Debug\net6.0\Nigel.Dapr.DomainActors.csproj.AssemblyReference.cache
+D:\Labs\Code\Dapr\DaprDemo\Nigel.Dapr\Nigel.Dapr.DomainActors\obj\Debug\net6.0\Nigel.Dapr.DomainActors.GeneratedMSBuildEditorConfig.editorconfig
+D:\Labs\Code\Dapr\DaprDemo\Nigel.Dapr\Nigel.Dapr.DomainActors\obj\Debug\net6.0\Nigel.Dapr.DomainActors.AssemblyInfoInputs.cache
+D:\Labs\Code\Dapr\DaprDemo\Nigel.Dapr\Nigel.Dapr.DomainActors\obj\Debug\net6.0\Nigel.Dapr.DomainActors.AssemblyInfo.cs
+D:\Labs\Code\Dapr\DaprDemo\Nigel.Dapr\Nigel.Dapr.DomainActors\obj\Debug\net6.0\Nigel.Dapr.DomainActors.csproj.CoreCompileInputs.cache
+D:\Labs\Code\Dapr\DaprDemo\Nigel.Dapr\Nigel.Dapr.DomainActors\obj\Debug\net6.0\Nigel.Dapr.DomainActors.dll
+D:\Labs\Code\Dapr\DaprDemo\Nigel.Dapr\Nigel.Dapr.DomainActors\obj\Debug\net6.0\refint\Nigel.Dapr.DomainActors.dll
+D:\Labs\Code\Dapr\DaprDemo\Nigel.Dapr\Nigel.Dapr.DomainActors\obj\Debug\net6.0\Nigel.Dapr.DomainActors.pdb
+D:\Labs\Code\Dapr\DaprDemo\Nigel.Dapr\Nigel.Dapr.DomainActors\obj\Debug\net6.0\ref\Nigel.Dapr.DomainActors.dll

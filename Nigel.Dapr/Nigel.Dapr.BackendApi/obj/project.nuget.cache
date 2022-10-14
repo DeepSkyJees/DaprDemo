@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "RHRqeajWzpBUNQXW0NQ+TuYUtsnz6batutv++AVYQxV9K0IKF2p0cFnqZyEhirymwb9BpcBNNVLZxEHjWpTp4A==",
+  "dgSpecHash": "mHOeTDb+E9T1DdS8EgCL+UKi9tiQQ5XOnYCzTcRLB+M/7tjuBajGFaznNz/QlMc9GEK0oMNUail5V74p71eMQA==",
   "success": true,
-  "projectFilePath": "D:\\Labs\\Code\\Dapr\\Nigel.Dapr\\Nigel.Dapr.BackendApi\\Nigel.Dapr.BackendApi.csproj",
+  "projectFilePath": "D:\\Labs\\Code\\Dapr\\DaprDemo\\Nigel.Dapr\\Nigel.Dapr.BackendApi\\Nigel.Dapr.BackendApi.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\yuliang\\.nuget\\packages\\dapr.actors\\1.8.0\\dapr.actors.1.8.0.nupkg.sha512",
+    "C:\\Users\\yuliang\\.nuget\\packages\\dapr.actors.aspnetcore\\1.8.0\\dapr.actors.aspnetcore.1.8.0.nupkg.sha512",
     "C:\\Users\\yuliang\\.nuget\\packages\\dapr.aspnetcore\\1.8.0\\dapr.aspnetcore.1.8.0.nupkg.sha512",
     "C:\\Users\\yuliang\\.nuget\\packages\\dapr.client\\1.8.0\\dapr.client.1.8.0.nupkg.sha512",
     "C:\\Users\\yuliang\\.nuget\\packages\\google.api.commonprotos\\2.2.0\\google.api.commonprotos.2.2.0.nupkg.sha512",
@@ -12,7 +14,7 @@
     "C:\\Users\\yuliang\\.nuget\\packages\\grpc.net.client\\2.32.0\\grpc.net.client.2.32.0.nupkg.sha512",
     "C:\\Users\\yuliang\\.nuget\\packages\\grpc.net.common\\2.32.0\\grpc.net.common.2.32.0.nupkg.sha512",
     "C:\\Users\\yuliang\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
-    "C:\\Users\\yuliang\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\3.0.3\\microsoft.extensions.logging.abstractions.3.0.3.nupkg.sha512",
+    "C:\\Users\\yuliang\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\3.1.0\\microsoft.extensions.logging.abstractions.3.1.0.nupkg.sha512",
     "C:\\Users\\yuliang\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
     "C:\\Users\\yuliang\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.17.0\\microsoft.visualstudio.azure.containers.tools.targets.1.17.0.nupkg.sha512",
     "C:\\Users\\yuliang\\.nuget\\packages\\nigel.extensions.swashbuckle\\6.1.0\\nigel.extensions.swashbuckle.6.1.0.nupkg.sha512",

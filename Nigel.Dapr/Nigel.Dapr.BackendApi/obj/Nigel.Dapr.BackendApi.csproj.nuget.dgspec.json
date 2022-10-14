@@ -1,17 +1,107 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Labs\\Code\\Dapr\\Nigel.Dapr\\Nigel.Dapr.BackendApi\\Nigel.Dapr.BackendApi.csproj": {}
+    "D:\\Labs\\Code\\Dapr\\DaprDemo\\Nigel.Dapr\\Nigel.Dapr.BackendApi\\Nigel.Dapr.BackendApi.csproj": {}
   },
   "projects": {
-    "D:\\Labs\\Code\\Dapr\\Nigel.Dapr\\Nigel.Dapr.BackendApi\\Nigel.Dapr.BackendApi.csproj": {
+    "D:\\Labs\\Code\\Dapr\\DaprDemo\\Nigel.Dapr\\Nigel.Dapr.BackendApi\\Nigel.Dapr.BackendApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Labs\\Code\\Dapr\\Nigel.Dapr\\Nigel.Dapr.BackendApi\\Nigel.Dapr.BackendApi.csproj",
+        "projectUniqueName": "D:\\Labs\\Code\\Dapr\\DaprDemo\\Nigel.Dapr\\Nigel.Dapr.BackendApi\\Nigel.Dapr.BackendApi.csproj",
         "projectName": "Nigel.Dapr.BackendApi",
-        "projectPath": "D:\\Labs\\Code\\Dapr\\Nigel.Dapr\\Nigel.Dapr.BackendApi\\Nigel.Dapr.BackendApi.csproj",
+        "projectPath": "D:\\Labs\\Code\\Dapr\\DaprDemo\\Nigel.Dapr\\Nigel.Dapr.BackendApi\\Nigel.Dapr.BackendApi.csproj",
         "packagesPath": "C:\\Users\\yuliang\\.nuget\\packages\\",
-        "outputPath": "D:\\Labs\\Code\\Dapr\\Nigel.Dapr\\Nigel.Dapr.BackendApi\\obj\\",
+        "outputPath": "D:\\Labs\\Code\\Dapr\\DaprDemo\\Nigel.Dapr\\Nigel.Dapr.BackendApi\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\yuliang\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "http://192.168.1.108:10081/repository/nuget-hosted": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\Labs\\Code\\Dapr\\DaprDemo\\Nigel.Dapr\\Nigel.Dapr.DomainActors\\Nigel.Dapr.DomainActors.csproj": {
+                "projectPath": "D:\\Labs\\Code\\Dapr\\DaprDemo\\Nigel.Dapr\\Nigel.Dapr.DomainActors\\Nigel.Dapr.DomainActors.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Dapr.Actors.AspNetCore": {
+              "target": "Package",
+              "version": "[1.8.0, )"
+            },
+            "Dapr.AspNetCore": {
+              "target": "Package",
+              "version": "[1.8.0, )"
+            },
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+              "target": "Package",
+              "version": "[1.17.0, )"
+            },
+            "Nigel.Extensions.Swashbuckle": {
+              "target": "Package",
+              "version": "[6.1.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.2.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Labs\\Code\\Dapr\\DaprDemo\\Nigel.Dapr\\Nigel.Dapr.DomainActors\\Nigel.Dapr.DomainActors.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Labs\\Code\\Dapr\\DaprDemo\\Nigel.Dapr\\Nigel.Dapr.DomainActors\\Nigel.Dapr.DomainActors.csproj",
+        "projectName": "Nigel.Dapr.DomainActors",
+        "projectPath": "D:\\Labs\\Code\\Dapr\\DaprDemo\\Nigel.Dapr\\Nigel.Dapr.DomainActors\\Nigel.Dapr.DomainActors.csproj",
+        "packagesPath": "C:\\Users\\yuliang\\.nuget\\packages\\",
+        "outputPath": "D:\\Labs\\Code\\Dapr\\DaprDemo\\Nigel.Dapr\\Nigel.Dapr.DomainActors\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -46,21 +136,9 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-            "Dapr.AspNetCore": {
+            "Dapr.Actors": {
               "target": "Package",
               "version": "[1.8.0, )"
-            },
-            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
-              "target": "Package",
-              "version": "[1.17.0, )"
-            },
-            "Nigel.Extensions.Swashbuckle": {
-              "target": "Package",
-              "version": "[6.1.0, )"
-            },
-            "Swashbuckle.AspNetCore": {
-              "target": "Package",
-              "version": "[6.2.3, )"
             }
           },
           "imports": [
@@ -75,9 +153,6 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

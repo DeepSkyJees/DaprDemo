@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1YGr0uMFlyNQiuYa7XGxUhvKQ18rONxGM3kxgibyXRAjhqQvMnHDSpBFvapPh7wvKF6WGuUG3L1Br9IGDnxDmg==",
+  "dgSpecHash": "FbZLCkUuktbzD2fc+fpd1WHKbGfB+M953K5fZPgBnRPoiukrT4x403pi8G0UQiykCPjZtF/9aiMm37vkgR7Vsg==",
   "success": true,
-  "projectFilePath": "D:\\Labs\\Code\\Dapr\\Nigel.Dapr\\Nigel.Dapr.FrontApi\\Nigel.Dapr.FrontApi.csproj",
+  "projectFilePath": "D:\\Labs\\Code\\Dapr\\DaprDemo\\Nigel.Dapr\\Nigel.Dapr.FrontApi\\Nigel.Dapr.FrontApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\yuliang\\.nuget\\packages\\dapr.aspnetcore\\1.8.0\\dapr.aspnetcore.1.8.0.nupkg.sha512",
     "C:\\Users\\yuliang\\.nuget\\packages\\dapr.client\\1.8.0\\dapr.client.1.8.0.nupkg.sha512",

@@ -8,10 +8,24 @@
     ".NETCoreApp,Version=v6.0": {
       "Nigel.Dapr.ConsoleClient/1.0.0": {
         "dependencies": {
-          "Dapr.Client": "1.8.0"
+          "Dapr.Actors": "1.8.0",
+          "Dapr.Client": "1.8.0",
+          "Nigel.Dapr.DomainActors": "1.0.0"
         },
         "runtime": {
           "Nigel.Dapr.ConsoleClient.dll": {}
+        }
+      },
+      "Dapr.Actors/1.8.0": {
+        "dependencies": {
+          "Dapr.Client": "1.8.0",
+          "Microsoft.Extensions.Logging.Abstractions": "3.1.0"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Dapr.Actors.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.8.0.0"
+          }
         }
       },
       "Dapr.Client/1.8.0": {
@@ -65,7 +79,7 @@
       "Grpc.Net.Client/2.32.0": {
         "dependencies": {
           "Grpc.Net.Common": "2.32.0",
-          "Microsoft.Extensions.Logging.Abstractions": "3.0.3",
+          "Microsoft.Extensions.Logging.Abstractions": "3.1.0",
           "System.Diagnostics.DiagnosticSource": "4.5.1"
         },
         "runtime": {
@@ -86,18 +100,26 @@
           }
         }
       },
-      "Microsoft.Extensions.Logging.Abstractions/3.0.3": {
+      "Microsoft.Extensions.Logging.Abstractions/3.1.0": {
         "runtime": {
           "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.dll": {
-            "assemblyVersion": "3.0.3.0",
-            "fileVersion": "3.0.320.7202"
+            "assemblyVersion": "3.1.0.0",
+            "fileVersion": "3.100.19.56504"
           }
         }
       },
       "System.Diagnostics.DiagnosticSource/4.5.1": {},
       "System.Memory/4.5.3": {},
       "System.Net.Http.Json/5.0.0": {},
-      "System.Runtime.CompilerServices.Unsafe/4.5.2": {}
+      "System.Runtime.CompilerServices.Unsafe/4.5.2": {},
+      "Nigel.Dapr.DomainActors/1.0.0": {
+        "dependencies": {
+          "Dapr.Actors": "1.8.0"
+        },
+        "runtime": {
+          "Nigel.Dapr.DomainActors.dll": {}
+        }
+      }
     }
   },
   "libraries": {
@@ -105,6 +127,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Dapr.Actors/1.8.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-mftPu+jT+StIrcQDJThRDkcJIyoR2o04FYe+lS3els0NJLzOvLsrK4WIqawI977R9tjv1J59J9FO0O140LsaVw==",
+      "path": "dapr.actors/1.8.0",
+      "hashPath": "dapr.actors.1.8.0.nupkg.sha512"
     },
     "Dapr.Client/1.8.0": {
       "type": "package",
@@ -148,12 +177,12 @@
       "path": "grpc.net.common/2.32.0",
       "hashPath": "grpc.net.common.2.32.0.nupkg.sha512"
     },
-    "Microsoft.Extensions.Logging.Abstractions/3.0.3": {
+    "Microsoft.Extensions.Logging.Abstractions/3.1.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-m2Jyi/MEn043WMI1I6J1ALuCThktZ93rd7eqzYeLmMcA0bdZC+TBVl0LuEbEWM01dWeeBjOoagjNwQTzOi2r6A==",
-      "path": "microsoft.extensions.logging.abstractions/3.0.3",
-      "hashPath": "microsoft.extensions.logging.abstractions.3.0.3.nupkg.sha512"
+      "sha512": "sha512-jjo4YXRx6MIpv6DiRxJjSpl+sPP0+5VW0clMEdLyIAz44PPwrDTFrd5PZckIxIXl1kKZ2KK6IL2nkt0+ug2MQg==",
+      "path": "microsoft.extensions.logging.abstractions/3.1.0",
+      "hashPath": "microsoft.extensions.logging.abstractions.3.1.0.nupkg.sha512"
     },
     "System.Diagnostics.DiagnosticSource/4.5.1": {
       "type": "package",
@@ -182,6 +211,11 @@
       "sha512": "sha512-wprSFgext8cwqymChhrBLu62LMg/1u92bU+VOwyfBimSPVFXtsNqEWC92Pf9ofzJFlk4IHmJA75EDJn1b2goAQ==",
       "path": "system.runtime.compilerservices.unsafe/4.5.2",
       "hashPath": "system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512"
+    },
+    "Nigel.Dapr.DomainActors/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

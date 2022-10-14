@@ -11,6 +11,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nigel.Dapr.FrontApi", "Nige
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "yaml", "yaml", "{4C273C9B-C3BA-4BA8-8406-26FFFDACC073}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nigel.Dapr.DomainActors", "Nigel.Dapr.DomainActors\Nigel.Dapr.DomainActors.csproj", "{5AE432F3-7520-44D9-A5B6-AC88838A03D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nigel.Dapr.Svc", "Nigel.Dapr.Svc\Nigel.Dapr.Svc.csproj", "{E09F92E1-84D7-4CEA-BD21-05D89AAB25DB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +33,14 @@ Global
 		{B96CB470-7327-4EA0-A0DE-D820CC113258}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B96CB470-7327-4EA0-A0DE-D820CC113258}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B96CB470-7327-4EA0-A0DE-D820CC113258}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5AE432F3-7520-44D9-A5B6-AC88838A03D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AE432F3-7520-44D9-A5B6-AC88838A03D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AE432F3-7520-44D9-A5B6-AC88838A03D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AE432F3-7520-44D9-A5B6-AC88838A03D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E09F92E1-84D7-4CEA-BD21-05D89AAB25DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E09F92E1-84D7-4CEA-BD21-05D89AAB25DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E09F92E1-84D7-4CEA-BD21-05D89AAB25DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E09F92E1-84D7-4CEA-BD21-05D89AAB25DB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
