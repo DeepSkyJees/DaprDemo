@@ -1,0 +1,59 @@
+version: '3.4'
+
+services:
+  backend-api:
+    image: nigel/nigeldaprbackendapi:dev
+    container_name: Nigel.Dapr.BackendApi
+    build:
+      target: base
+      labels:
+        com.microsoft.created-by: "visual-studio"
+        com.microsoft.visual-studio.project-name: "Nigel.Dapr.BackendApi"
+    environment:
+      - DOTNET_USE_POLLING_FILE_WATCHER=1
+      - ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS=true
+      - NUGET_FALLBACK_PACKAGES=/root/.nuget/fallbackpackages
+    volumes:
+      - D:\Labs\Code\Dapr\DaprDemo\Nigel.Dapr\Nigel.Dapr.BackendApi:/app
+      - D:\Labs\Code\Dapr\DaprDemo\Nigel.Dapr:/src
+      - C:\Users\yuliang\vsdbg\vs2017u5:/remote_debugger:rw
+      - C:\Users\yuliang\.nuget\packages\:/root/.nuget/packages:ro
+      - C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages:/root/.nuget/fallbackpackages:ro
+      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+
+    entrypoint: tail -f /dev/null
+    labels:
+      com.microsoft.visualstudio.debuggee.program: "dotnet"
+      com.microsoft.visualstudio.debuggee.arguments: " --additionalProbingPath /root/.nuget/packages --additionalProbingPath /root/.nuget/fallbackpackages  \"/app/bin/Debug/net6.0/Nigel.Dapr.BackendApi.dll\""
+      com.microsoft.visualstudio.debuggee.workingdirectory: "/app"
+      com.microsoft.visualstudio.debuggee.killprogram: "/bin/sh -c \"if PID=$$(pidof dotnet); then kill $$PID; fi\""
+    tty: true
+  front-api:
+    image: nigel/nigeldaprfrontapi:dev
+    container_name: Nigel.Dapr.FrontApi
+    build:
+      target: base
+      labels:
+        com.microsoft.created-by: "visual-studio"
+        com.microsoft.visual-studio.project-name: "Nigel.Dapr.FrontApi"
+    environment:
+      - DOTNET_USE_POLLING_FILE_WATCHER=1
+      - ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS=true
+      - NUGET_FALLBACK_PACKAGES=/root/.nuget/fallbackpackages
+    volumes:
+      - D:\Labs\Code\Dapr\DaprDemo\Nigel.Dapr\Nigel.Dapr.FrontApi:/app
+      - D:\Labs\Code\Dapr\DaprDemo\Nigel.Dapr:/src
+      - C:\Users\yuliang\vsdbg\vs2017u5:/remote_debugger:rw
+      - C:\Users\yuliang\.nuget\packages\:/root/.nuget/packages:ro
+      - C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages:/root/.nuget/fallbackpackages:ro
+      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+
+    entrypoint: tail -f /dev/null
+    labels:
+      com.microsoft.visualstudio.debuggee.program: "dotnet"
+      com.microsoft.visualstudio.debuggee.arguments: " --additionalProbingPath /root/.nuget/packages --additionalProbingPath /root/.nuget/fallbackpackages  \"/app/bin/Debug/net6.0/Nigel.Dapr.FrontApi.dll\""
+      com.microsoft.visualstudio.debuggee.workingdirectory: "/app"
+      com.microsoft.visualstudio.debuggee.killprogram: "/bin/sh -c \"if PID=$$(pidof dotnet); then kill $$PID; fi\""
+    tty: true

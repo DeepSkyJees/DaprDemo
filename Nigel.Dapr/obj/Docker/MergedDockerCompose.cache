@@ -1,0 +1,64 @@
+services:
+  backend-api:
+    build:
+      context: D:\Labs\Code\Dapr\DaprDemo\Nigel.Dapr
+      dockerfile: Nigel.Dapr.BackendApi/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: http://0.0.0.0:80
+    image: nigel/nigeldaprbackendapi:latest
+    ports:
+    - published: 6100
+      target: 80
+  backend-api-dapr:
+    command:
+    - ./daprd
+    - -app-id
+    - backend
+    - -app-port
+    - '80'
+    - -dapr-http-port
+    - '3500'
+    - -dapr-grpc-port
+    - '50001'
+    - -components-path
+    - /components
+    depends_on:
+      backend-api:
+        condition: service_started
+    image: daprio/daprd:1.9.0
+    network_mode: service:backend-api
+    volumes:
+    - D:\Labs\Code\Dapr\DaprDemo\Nigel.Dapr\dapr\components:/components:rw
+  front-api:
+    build:
+      context: D:\Labs\Code\Dapr\DaprDemo\Nigel.Dapr
+      dockerfile: Nigel.Dapr.FrontApi/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: http://0.0.0.0:80
+    image: nigel/nigeldaprfrontapi:latest
+    ports:
+    - published: 6101
+      target: 80
+  front-api-dapr:
+    command:
+    - ./daprd
+    - -app-id
+    - front
+    - -app-port
+    - '80'
+    - -dapr-http-port
+    - '3500'
+    - -dapr-grpc-port
+    - '50001'
+    - -components-path
+    - /components
+    depends_on:
+      front-api:
+        condition: service_started
+    image: daprio/daprd:1.9.0
+    network_mode: service:front-api
+    volumes:
+    - D:\Labs\Code\Dapr\DaprDemo\Nigel.Dapr\dapr\components:/components:rw
+version: '3.4'

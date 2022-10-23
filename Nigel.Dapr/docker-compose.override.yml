@@ -1,0 +1,45 @@
+version: '3.4'
+
+services:
+
+
+  #redis:
+  #  image: redis:alpine
+  #  ports:
+  #    - "6379:6379"
+
+  backend-api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://0.0.0.0:80
+    ports:
+      - "6100:80"
+
+  backend-api-dapr:
+    command: ["./daprd",
+      "-app-id", "backend",
+      "-app-port", "80",
+      "-dapr-http-port","3500",
+      "-dapr-grpc-port","50001",
+      "-components-path", "/components",
+      ]
+    volumes:
+      - "./dapr/components/:/components"
+
+  front-api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://0.0.0.0:80
+    ports:
+      - "6101:80"
+
+  front-api-dapr:
+    command: ["./daprd",
+      "-app-id", "front",
+      "-app-port", "80",
+      "-dapr-http-port","3500",
+      "-dapr-grpc-port","50001",
+      "-components-path", "/components"
+      ]
+    volumes:
+      - "./dapr/components/:/components"

@@ -1,0 +1,114 @@
+services:
+  backend-api:
+    build:
+      context: D:\Labs\Code\Dapr\DaprDemo\Nigel.Dapr
+      dockerfile: Nigel.Dapr.BackendApi/Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: Nigel.Dapr.BackendApi
+      target: base
+    container_name: Nigel.Dapr.BackendApi
+    entrypoint: tail -f /dev/null
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
+      ASPNETCORE_URLS: http://0.0.0.0:80
+      DOTNET_USE_POLLING_FILE_WATCHER: '1'
+      NUGET_FALLBACK_PACKAGES: /root/.nuget/fallbackpackages
+    image: nigel/nigeldaprbackendapi:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages
+        --additionalProbingPath /root/.nuget/fallbackpackages  "/app/bin/Debug/net6.0/Nigel.Dapr.BackendApi.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
+        dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    ports:
+    - published: 6100
+      target: 80
+    tty: true
+    volumes:
+    - D:\Labs\Code\Dapr\DaprDemo\Nigel.Dapr\Nigel.Dapr.BackendApi:/app:rw
+    - C:\Users\yuliang\vsdbg\vs2017u5:/remote_debugger:rw
+    - C:\Users\yuliang\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\yuliang\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+    - C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages:/root/.nuget/fallbackpackages:ro
+    - C:\Users\yuliang\.nuget\packages:/root/.nuget/packages:ro
+    - D:\Labs\Code\Dapr\DaprDemo\Nigel.Dapr:/src:rw
+  backend-api-dapr:
+    command:
+    - ./daprd
+    - -app-id
+    - backend
+    - -app-port
+    - '80'
+    - -dapr-http-port
+    - '3500'
+    - -dapr-grpc-port
+    - '50001'
+    - -components-path
+    - /components
+    depends_on:
+      backend-api:
+        condition: service_started
+    image: daprio/daprd:1.9.0
+    network_mode: service:backend-api
+    volumes:
+    - D:\Labs\Code\Dapr\DaprDemo\Nigel.Dapr\dapr\components:/components:rw
+  front-api:
+    build:
+      context: D:\Labs\Code\Dapr\DaprDemo\Nigel.Dapr
+      dockerfile: Nigel.Dapr.FrontApi/Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: Nigel.Dapr.FrontApi
+      target: base
+    container_name: Nigel.Dapr.FrontApi
+    entrypoint: tail -f /dev/null
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
+      ASPNETCORE_URLS: http://0.0.0.0:80
+      DOTNET_USE_POLLING_FILE_WATCHER: '1'
+      NUGET_FALLBACK_PACKAGES: /root/.nuget/fallbackpackages
+    image: nigel/nigeldaprfrontapi:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages
+        --additionalProbingPath /root/.nuget/fallbackpackages  "/app/bin/Debug/net6.0/Nigel.Dapr.FrontApi.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
+        dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    ports:
+    - published: 6101
+      target: 80
+    tty: true
+    volumes:
+    - D:\Labs\Code\Dapr\DaprDemo\Nigel.Dapr\Nigel.Dapr.FrontApi:/app:rw
+    - C:\Users\yuliang\vsdbg\vs2017u5:/remote_debugger:rw
+    - C:\Users\yuliang\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\yuliang\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+    - C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages:/root/.nuget/fallbackpackages:ro
+    - C:\Users\yuliang\.nuget\packages:/root/.nuget/packages:ro
+    - D:\Labs\Code\Dapr\DaprDemo\Nigel.Dapr:/src:rw
+  front-api-dapr:
+    command:
+    - ./daprd
+    - -app-id
+    - front
+    - -app-port
+    - '80'
+    - -dapr-http-port
+    - '3500'
+    - -dapr-grpc-port
+    - '50001'
+    - -components-path
+    - /components
+    depends_on:
+      front-api:
+        condition: service_started
+    image: daprio/daprd:1.9.0
+    network_mode: service:front-api
+    volumes:
+    - D:\Labs\Code\Dapr\DaprDemo\Nigel.Dapr\dapr\components:/components:rw
+version: '3.4'

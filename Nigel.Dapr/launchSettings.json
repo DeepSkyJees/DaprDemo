@@ -1,0 +1,17 @@
+{
+  "profiles": {
+    "Docker Compose": {
+      "commandName": "DockerCompose",
+      "commandVersion": "1.0",
+      "composeLaunchAction": "LaunchBrowser",
+      "composeLaunchServiceName": "front-api",
+      "composeLaunchUrl": "{Scheme}://localhost:{ServicePort}/front",
+      "serviceActions": {
+        "backend-api-dapr": "StartWithoutDebugging",
+        "backend-api": "StartDebugging",
+        "front-api": "StartDebugging",
+        "front-api-dapr": "StartWithoutDebugging"
+      }
+    }
+  }
+}

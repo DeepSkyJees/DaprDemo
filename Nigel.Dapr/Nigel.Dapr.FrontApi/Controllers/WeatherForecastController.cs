@@ -12,19 +12,24 @@ namespace Nigel.Dapr.FrontApi.Controllers
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
         };
 
+        public readonly IConfiguration _configuration;
+
         private readonly DaprClient _daprClient;
 
         private readonly ILogger<WeatherForecastController> _logger;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger, DaprClient daprClient)
+        public WeatherForecastController(ILogger<WeatherForecastController> logger, DaprClient daprClient, IConfiguration configuration)
         {
             _logger = logger;
             _daprClient = daprClient;
+            _configuration = configuration;
         }
 
         [HttpGet(Name = "GetWeatherForecast")]
         public async Task<ActionResult> Get()
         {
+            var s = this._configuration.GetValue<string>("My");
+            var s1 = this._configuration.GetValue<string>("My1");
             var result = await _daprClient.InvokeMethodAsync<IEnumerable<WeatherForecast>>(HttpMethod.Get, "backend", "Backend/WeatherForecast/GetWeatherForecast");
             return Ok(result);
         }
@@ -44,7 +49,7 @@ namespace Nigel.Dapr.FrontApi.Controllers
         [HttpPut("SaveRedisState")]
         public async Task<ActionResult> SaveRedisStateAsync(string key,string value)
         {
-           await  this._daprClient.SaveStateAsync("redisstore", key, value);
+           await  this._daprClient.SaveStateAsync("demodapr-statestore", key, value);
            return this.Ok(new
            {
                key = key,
@@ -55,7 +60,7 @@ namespace Nigel.Dapr.FrontApi.Controllers
         [HttpGet("GetRedisState")]
         public async Task<ActionResult> SaveRedisStateAsync(string key)
         {
-            var value = await this._daprClient.GetStateAsync<string>("redisstore", key);
+            var value = await this._daprClient.GetStateAsync<string>("demodapr-statestore", key);
             return this.Ok(new
             {
                 key = key,

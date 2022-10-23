@@ -13,7 +13,16 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "yaml", "yaml", "{4C273C9B-C
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nigel.Dapr.DomainActors", "Nigel.Dapr.DomainActors\Nigel.Dapr.DomainActors.csproj", "{5AE432F3-7520-44D9-A5B6-AC88838A03D8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nigel.Dapr.Svc", "Nigel.Dapr.Svc\Nigel.Dapr.Svc.csproj", "{E09F92E1-84D7-4CEA-BD21-05D89AAB25DB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nigel.Dapr.Svc", "Nigel.Dapr.Svc\Nigel.Dapr.Svc.csproj", "{E09F92E1-84D7-4CEA-BD21-05D89AAB25DB}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{6143D904-AB11-4AFE-8CC3-4B55E5CF78BD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dapr", "dapr", "{2CEC546E-D9C9-409B-B7DD-3014491226EA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "components", "components", "{C2D69318-2667-46D3-B4CD-620557F3D912}"
+	ProjectSection(SolutionItems) = preProject
+		dapr\components\demodapr-statestore.yaml = dapr\components\demodapr-statestore.yaml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,9 +50,16 @@ Global
 		{E09F92E1-84D7-4CEA-BD21-05D89AAB25DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E09F92E1-84D7-4CEA-BD21-05D89AAB25DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E09F92E1-84D7-4CEA-BD21-05D89AAB25DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6143D904-AB11-4AFE-8CC3-4B55E5CF78BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6143D904-AB11-4AFE-8CC3-4B55E5CF78BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6143D904-AB11-4AFE-8CC3-4B55E5CF78BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6143D904-AB11-4AFE-8CC3-4B55E5CF78BD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C2D69318-2667-46D3-B4CD-620557F3D912} = {2CEC546E-D9C9-409B-B7DD-3014491226EA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {971A67C8-ADB1-4AC9-88FB-090F11188FCF}

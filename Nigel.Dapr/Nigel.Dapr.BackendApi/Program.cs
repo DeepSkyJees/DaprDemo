@@ -11,13 +11,13 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddActors(options =>
 {
-    options.Actors.RegisterActor<UserActor>();
+    //options.Actors.RegisterActor<UserActor>();
     options.Actors.RegisterActor<GoodsActor>();
 });
 builder.Services.AddControllers(opt =>
 {
-    opt.UseCentralRoutePrefix(new RouteAttribute("Backend"));
-});//.AddDapr();
+    opt.UseCentralRoutePrefix(new RouteAttribute("backend"));
+}).AddDapr();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -33,17 +33,19 @@ var app = builder.Build();
 //}
 app.UseSwagger();
 app.UseSwaggerUI();
-
+app.UseCloudEvents();
 //app.UseSwaggerDocs();
 app.UseRouting();
 
 app.UseAuthorization();
 app.UseEndpoints(endpoints =>
 {
+    endpoints.MapSubscribeHandler();
     endpoints.MapActorsHandlers();
     endpoints.MapControllers();
 
 });
 //app.MapControllers();
+app.MapPost("/myevent", ([Microsoft.AspNetCore.Mvc.FromBody] string word) => Console.WriteLine($"Hello {word}!"));
 
 app.Run();
